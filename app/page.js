@@ -17,22 +17,31 @@ import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
 
 /* === FLOATING CTA (integrado, sin archivo externo) ====================== */
-// [INSERTAR: mismo número de WhatsApp que en LeadForm.js]
-const WA_NUMBER = "59176076918";
-
 function FloatingCTA() {
-  const handleClick = () => {
-    const msg = encodeURIComponent(
-      "Hola Ingrid, me interesa una asesoría inmobiliaria personalizada."
-    );
-    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => {
+      // Aparece después de pasar el hero (aprox. una pantalla)
+      setVisible(window.scrollY > window.innerHeight * 0.9);
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  const goToForm = () => {
+    document.getElementById("contacto")?.scrollIntoView({ behavior: "smooth" });
   };
+
   return (
     <button
-      onClick={handleClick}
-      aria-label="Contactar a Ingrid por WhatsApp"
+      onClick={goToForm}
+      aria-label="Ir al formulario de contacto"
       style={{ zIndex: 9999 }}
-      className="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 sm:bottom-8 flex items-center gap-3 bg-gold hover:bg-gold-dark active:scale-95 text-navy font-sans font-medium text-sm tracking-wide px-7 py-4 shadow-2xl transition-all duration-300 whitespace-nowrap"
+      className={`fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 sm:bottom-8 flex items-center gap-3 bg-gold hover:bg-gold-dark active:scale-95 text-navy font-sans font-medium text-sm tracking-wide px-7 py-4 shadow-2xl transition-all duration-500 whitespace-nowrap ${
+        visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-8 pointer-events-none"
+      }`}
     >
       <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
         <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
