@@ -11,9 +11,7 @@ import {
   TrendingUp,
   Quote,
   Instagram,
-  ArrowDown,
-  useState, 
-  useEffect
+  ArrowDown
 } from "react";
 import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
