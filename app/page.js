@@ -1,5 +1,6 @@
-"use client";import { useState, useEffect } from "react";
+"use client";
 
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import {
   MapPin,
@@ -11,8 +12,8 @@ import {
   TrendingUp,
   Quote,
   Instagram,
-  ArrowDown
-} from "react";
+  ArrowDown,
+} from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
 
@@ -22,7 +23,6 @@ function FloatingCTA() {
 
   useEffect(() => {
     const onScroll = () => {
-      // Aparece después de pasar el hero (aprox. una pantalla)
       setVisible(window.scrollY > window.innerHeight * 0.9);
     };
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -40,7 +40,9 @@ function FloatingCTA() {
       aria-label="Ir al formulario de contacto"
       style={{ zIndex: 9999 }}
       className={`fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 sm:bottom-8 flex items-center gap-3 bg-gold hover:bg-gold-dark active:scale-95 text-navy font-sans font-medium text-sm tracking-wide px-7 py-4 shadow-2xl transition-all duration-500 whitespace-nowrap ${
-        visible ? "opacity-100 translate-y-0 pointer-events-auto" : "opacity-0 translate-y-8 pointer-events-none"
+        visible
+          ? "opacity-100 translate-y-0 pointer-events-auto"
+          : "opacity-0 translate-y-8 pointer-events-none"
       }`}
     >
       <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
@@ -161,7 +163,7 @@ export default function Page() {
             alt="Ingrid Cuellar, asesora inmobiliaria de lujo en Santa Cruz"
             fill
             priority
-            className="object-cover object-center opacity-90 md:opacity-100 md:object-[75%_center]"
+            className="object-cover object-[50%_20%] opacity-90 md:opacity-100 md:object-[72%_18%]"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 md:via-navy/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-navy/40" />
