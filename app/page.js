@@ -14,7 +14,7 @@ import {
   ArrowDown,
   useState, 
   useEffect
-} from "lucide-react";
+} from "react";
 import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
 
