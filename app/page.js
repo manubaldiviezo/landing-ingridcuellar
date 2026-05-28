@@ -15,7 +15,32 @@ import {
 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
-import FloatingCTA from "@/components/FloatingCTA";
+
+/* === FLOATING CTA (integrado, sin archivo externo) ====================== */
+// [INSERTAR: mismo número de WhatsApp que en LeadForm.js]
+const WA_NUMBER = "59100000000";
+
+function FloatingCTA() {
+  const handleClick = () => {
+    const msg = encodeURIComponent(
+      "Hola Ingrid, me interesa una asesoría inmobiliaria personalizada."
+    );
+    window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
+  };
+  return (
+    <button
+      onClick={handleClick}
+      aria-label="Contactar a Ingrid por WhatsApp"
+      style={{ zIndex: 9999 }}
+      className="fixed bottom-6 left-1/2 -translate-x-1/2 sm:left-auto sm:translate-x-0 sm:right-6 sm:bottom-8 flex items-center gap-3 bg-gold hover:bg-gold-dark active:scale-95 text-navy font-sans font-medium text-sm tracking-wide px-7 py-4 shadow-2xl transition-all duration-300 whitespace-nowrap"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+      </svg>
+      Hablar con Ingrid
+    </button>
+  );
+}
 
 /* === DATOS EDITABLES ===================================================== */
 const STATS = [
