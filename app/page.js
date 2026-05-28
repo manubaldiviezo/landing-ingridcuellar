@@ -136,19 +136,19 @@ export default function Page() {
           <p className="kicker text-gold mb-6 animate-fade-in">
             Santa Cruz de la Sierra · Bolivia
           </p>
-          <h1 className="font-serif text-cream text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] mb-6 animate-fade-up">
+          <h1 className="font-serif text-cream text-4xl md:text-6xl lg:text-7xl font-light leading-[1.05] mb-6 animate-fade-up">
             El lujo no se busca.
             <br />
             <span className="italic text-gold-light">Se encuentra bien asesorado.</span>
           </h1>
-          <p className="text-cream/80 text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
+          <p className="text-cream/80 text-base md:text-xl font-light leading-relaxed max-w-xl mb-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
             Propiedades exclusivas en Equipetrol y el Urubó para quienes saben
             que una buena inversión empieza por la persona correcta.
           </p>
           <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <a
               href="#contacto"
-              className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy font-medium px-9 py-4 tracking-wide transition-all duration-300"
+              className="inline-flex items-center w-full justify-center sm:w-auto gap-3 bg-gold hover:bg-gold-light text-navy font-medium px-9 py-4 tracking-wide transition-all duration-300"
             >
               Quiero asesoría personalizada
             </a>
