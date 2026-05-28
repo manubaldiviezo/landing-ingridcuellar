@@ -126,7 +126,7 @@ export default function Page() {
             alt="Ingrid Cuellar, asesora inmobiliaria de lujo en Santa Cruz"
             fill
             priority
-            className="object-cover object-center opacity-90 md:opacity-100 md:object-[75%_center]"
+            className="object-cover object-top opacity-90 md:opacity-100 md:object-[75%_15%]"     
           />
           <div className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 md:via-navy/60 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-transparent to-navy/40" />
