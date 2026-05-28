@@ -18,7 +18,7 @@ import useReveal from "@/components/useReveal";
 
 /* === FLOATING CTA (integrado, sin archivo externo) ====================== */
 // [INSERTAR: mismo número de WhatsApp que en LeadForm.js]
-const WA_NUMBER = "59100000000";
+const WA_NUMBER = "59176076918";
 
 function FloatingCTA() {
   const handleClick = () => {
