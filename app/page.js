@@ -12,6 +12,8 @@ import {
   Quote,
   Instagram,
   ArrowDown,
+  useState, 
+  useEffect
 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
