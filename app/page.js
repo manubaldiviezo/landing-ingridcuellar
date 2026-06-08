@@ -192,8 +192,7 @@ export default function Page() {
           </h1>
           <p className="text-cream/80 text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
             Equipetrol, Urubó y Zona Norte. Propiedades residenciales,
-            comerciales y oportunidades de inversión en las zonas que mejor
-            conozco de Santa Cruz.
+            comerciales y oportunidades de inversión en las mejores zonas.
           </p>
           <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
             <a
