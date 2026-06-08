@@ -159,7 +159,7 @@ export default function Page() {
           className="h-9 w-auto"
           priority
         />
-        
+        <a
           href="#contacto"
           className="hidden sm:inline-block border border-gold/50 text-cream hover:bg-gold hover:text-navy transition-colors duration-300 px-6 py-2.5 text-xs tracking-luxe uppercase"
         >
@@ -172,7 +172,7 @@ export default function Page() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/ingrid-hero.jpg"
-            alt="Ingrid Cuellar, asesora inmobiliaria en Santa Cruz"
+            alt="Ingrid Cuellar, asesora inmobiliaria de lujo en Santa Cruz"
             fill
             priority
             className="object-cover object-[50%_20%] opacity-90 md:opacity-100 md:object-[72%_18%]"
@@ -196,7 +196,7 @@ export default function Page() {
             conozco de Santa Cruz.
           </p>
           <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            
+            <a
               href="#contacto"
               className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy font-medium px-9 py-4 tracking-wide transition-all duration-300"
             >
@@ -205,7 +205,7 @@ export default function Page() {
           </div>
         </div>
 
-        
+        <a
           href="#valor"
           aria-label="Ver más"
           className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-gold/70 hover:text-gold transition-colors"
@@ -302,7 +302,7 @@ export default function Page() {
                 height={48}
                 className="h-11 w-auto"
               />
-              
+              <a
                 href="https://instagram.com/ingridcuellarremax"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -469,7 +469,7 @@ export default function Page() {
           />
           <div className="flex items-center gap-6">
             <Image src="/img/remax-globo.png" alt="RE/MAX" width={36} height={36} className="h-9 w-auto" />
-            
+            <a
               href="https://instagram.com/ingridcuellarremax"
               target="_blank"
               rel="noopener noreferrer"
