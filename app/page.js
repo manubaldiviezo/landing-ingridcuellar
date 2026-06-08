@@ -13,6 +13,8 @@ import {
   Quote,
   Instagram,
   ArrowDown,
+  Compass,
+  Briefcase,
 } from "lucide-react";
 import LeadForm from "@/components/LeadForm";
 import useReveal from "@/components/useReveal";
@@ -56,25 +58,35 @@ function FloatingCTA() {
 /* === DATOS EDITABLES ===================================================== */
 const STATS = [
   { value: "+20", label: "Años en el mercado" },
-  { value: "Lujo", label: "Propiedades premium" },
-  { value: "3", label: "Mercados internacionales" }, // [INSERTAR: ajustar si aplica]
+  { value: "Premium", label: "Segmento que manejo" },
+  { value: "+30", label: "Países · red RE/MAX" },
 ];
 
 const ZONAS = [
   {
     icon: Building2,
     titulo: "Equipetrol",
-    desc: "Departamentos y penthouses de alta gama en el corazón financiero y social de la ciudad.",
+    desc: "Departamentos y penthouses en el corazón financiero y social de la ciudad.",
   },
   {
     icon: Home,
     titulo: "Urubó",
-    desc: "Casas y residencias exclusivas en condominios privados, rodeadas de naturaleza y seguridad.",
+    desc: "Casas y residencias en condominios privados, rodeadas de naturaleza y seguridad.",
+  },
+  {
+    icon: Compass,
+    titulo: "Zona Norte",
+    desc: "Áreas residenciales con la mejor proyección y plusvalía de Santa Cruz.",
+  },
+  {
+    icon: Briefcase,
+    titulo: "Comercial",
+    desc: "Locales, oficinas y propiedades de renta para inversionistas y emprendedores.",
   },
   {
     icon: TrendingUp,
     titulo: "Inversión",
-    desc: "Oportunidades comerciales y de renta con proyección real de valorización en Santa Cruz.",
+    desc: "Oportunidades con plusvalía real, respaldo legal y proyección de mercado.",
   },
 ];
 
@@ -92,7 +104,7 @@ const DIFERENCIADORES = [
   {
     icon: ShieldCheck,
     titulo: "Respaldo RE/MAX",
-    desc: "La red inmobiliaria más grande del mundo detrás de cada operación, con la atención personal y discreta que un cliente de lujo espera.",
+    desc: "La red inmobiliaria más grande del mundo detrás de cada operación, con la atención personal que cada cliente merece.",
   },
 ];
 
@@ -123,7 +135,7 @@ const FAQS = [
   },
   {
     q: "¿Qué pasa después de dejar mis datos?",
-    a: "Te contacto personalmente por WhatsApp en menos de 24 horas para entender qué buscás y mostrarte opciones reales que encajen con tu objetivo. Sin compromiso ni presión.",
+    a: "Te contacto personalmente en menos de 24 horas para coordinar una llamada y entender qué buscás. Sin compromiso ni presión.",
   },
   {
     q: "Quiero vender mi propiedad, ¿me ayudás?",
@@ -147,7 +159,7 @@ export default function Page() {
           className="h-9 w-auto"
           priority
         />
-        <a
+        
           href="#contacto"
           className="hidden sm:inline-block border border-gold/50 text-cream hover:bg-gold hover:text-navy transition-colors duration-300 px-6 py-2.5 text-xs tracking-luxe uppercase"
         >
@@ -160,7 +172,7 @@ export default function Page() {
         <div className="absolute inset-0 z-0">
           <Image
             src="/img/ingrid-hero.jpg"
-            alt="Ingrid Cuellar, asesora inmobiliaria de lujo en Santa Cruz"
+            alt="Ingrid Cuellar, asesora inmobiliaria en Santa Cruz"
             fill
             priority
             className="object-cover object-[50%_20%] opacity-90 md:opacity-100 md:object-[72%_18%]"
@@ -174,25 +186,26 @@ export default function Page() {
             Santa Cruz de la Sierra · Bolivia
           </p>
           <h1 className="font-serif text-cream text-5xl md:text-6xl lg:text-7xl font-light leading-[1.05] mb-6 animate-fade-up">
-            El lujo no se busca.
+            ¿Santa Cruz en la mira?
             <br />
-            <span className="italic text-gold-light">Se encuentra bien asesorado.</span>
+            <span className="italic text-gold-light">Agendemos una llamada.</span>
           </h1>
           <p className="text-cream/80 text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10 animate-fade-up" style={{ animationDelay: "0.15s" }}>
-            Propiedades exclusivas en Equipetrol y el Urubó para quienes saben
-            que una buena inversión empieza por la persona correcta.
+            Equipetrol, Urubó y Zona Norte. Propiedades residenciales,
+            comerciales y oportunidades de inversión en las zonas que mejor
+            conozco de Santa Cruz.
           </p>
           <div className="animate-fade-up" style={{ animationDelay: "0.3s" }}>
-            <a
+            
               href="#contacto"
               className="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-navy font-medium px-9 py-4 tracking-wide transition-all duration-300"
             >
-              Quiero asesoría personalizada
+              Agendar una llamada
             </a>
           </div>
         </div>
 
-        <a
+        
           href="#valor"
           aria-label="Ver más"
           className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 text-gold/70 hover:text-gold transition-colors"
@@ -218,17 +231,15 @@ export default function Page() {
       {/* ===================== PAIN / EMPATÍA ===================== */}
       <section className="bg-cream py-24 md:py-32 px-6">
         <div className="max-w-3xl mx-auto text-center">
-          <p className="kicker text-gold-dark mb-6 reveal">Lo entiendo</p>
+          <p className="kicker text-gold-dark mb-6 reveal">Antes que nada</p>
           <h2 className="font-serif text-navy text-3xl md:text-5xl font-light leading-tight mb-8 reveal">
-            Comprar en Santa Cruz sin alguien de confianza es jugar a ciegas.
+            Una buena propiedad no se elige sola.
           </h2>
           <div className="gold-rule w-24 mx-auto mb-8 reveal" />
           <p className="text-navy/70 text-lg font-light leading-relaxed reveal">
-            Precios inflados, propiedades que no son lo que prometen, papeleo
-            interminable y la sensación de que nadie juega para tu lado. Si
-            invertís desde afuera, todo se multiplica. Mereces a alguien que
-            conozca el terreno de verdad — y que ponga su reputación detrás de
-            cada recomendación.
+            Detrás de cada decisión hay un plan, una historia, una vida. Por eso
+            me gusta involucrarme: no te muestro listados, te ayudo a elegir lo
+            que realmente encaja con vos.
           </p>
         </div>
       </section>
@@ -239,17 +250,17 @@ export default function Page() {
           <div className="text-center mb-16">
             <p className="kicker text-gold-dark mb-4 reveal">Dónde trabajo</p>
             <h2 className="font-serif text-navy text-3xl md:text-5xl font-light reveal">
-              Las zonas más codiciadas de la ciudad
+              Las zonas que mejor conozco
             </h2>
           </div>
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {ZONAS.map((z, i) => {
               const Icon = z.icon;
               return (
                 <div
                   key={i}
-                  className="bg-white p-10 border-t-2 border-gold reveal group hover:shadow-xl transition-shadow duration-500"
-                  style={{ transitionDelay: `${i * 0.12}s` }}
+                  className="bg-white p-8 border-t-2 border-gold reveal group hover:shadow-xl transition-shadow duration-500"
+                  style={{ transitionDelay: `${i * 0.1}s` }}
                 >
                   <Icon className="w-8 h-8 text-gold mb-6" strokeWidth={1.3} />
                   <h3 className="font-serif text-navy text-2xl mb-3">{z.titulo}</h3>
@@ -291,7 +302,7 @@ export default function Page() {
                 height={48}
                 className="h-11 w-auto"
               />
-              <a
+              
                 href="https://instagram.com/ingridcuellarremax"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -355,7 +366,7 @@ export default function Page() {
           </div>
           <div className="grid md:grid-cols-3 gap-12">
             {[
-              { n: "01", t: "Conversamos", d: "Dejás tus datos y te escribo por WhatsApp para entender exactamente qué buscás." },
+              { n: "01", t: "Conversamos", d: "Dejás tus datos y agendamos una llamada para entender qué buscás exactamente." },
               { n: "02", t: "Seleccionamos", d: "Te presento opciones reales y filtradas que encajan con tu objetivo y presupuesto." },
               { n: "03", t: "Concretamos", d: "Te acompaño en cada paso hasta la firma, con respaldo legal y total transparencia." },
             ].map((p, i) => (
@@ -430,13 +441,13 @@ export default function Page() {
               Tu próxima propiedad empieza con una conversación.
             </h2>
             <p className="text-cream/70 font-light text-lg leading-relaxed mb-8">
-              Completá el formulario y te escribo personalmente por WhatsApp.
-              Sin compromiso, sin presión — solo asesoría real de alguien que
-              conoce el mercado.
+              Completá el formulario y te contacto personalmente para coordinar
+              una llamada. Sin compromiso, sin presión — solo asesoría real de
+              alguien que conoce el mercado.
             </p>
             <div className="flex items-center gap-3 text-cream/60 text-sm">
               <MapPin className="w-5 h-5 text-gold" />
-              Equipetrol · Urubó · Santa Cruz de la Sierra
+              Equipetrol · Urubó · Zona Norte · Santa Cruz
             </div>
           </div>
 
@@ -458,7 +469,7 @@ export default function Page() {
           />
           <div className="flex items-center gap-6">
             <Image src="/img/remax-globo.png" alt="RE/MAX" width={36} height={36} className="h-9 w-auto" />
-            <a
+            
               href="https://instagram.com/ingridcuellarremax"
               target="_blank"
               rel="noopener noreferrer"
